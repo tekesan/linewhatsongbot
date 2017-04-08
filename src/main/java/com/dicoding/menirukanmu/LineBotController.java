@@ -79,6 +79,9 @@ public class LineBotController
                         System.out.println("Exception is raised ");
                         e.printStackTrace();
                     }
+                if (!msgText.contains("kamu dimana")){
+                    msgText = "KangenBand - Yolanda"
+                }
                 } else {
                     if (payload.events[0].source.type.equals("group")){
                         leaveGR(payload.events[0].source.groupId, "group");
