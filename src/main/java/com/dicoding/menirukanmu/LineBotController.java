@@ -69,9 +69,13 @@ public class LineBotController
             if (!payload.events[0].message.type.equals("text")){
                 replyToUser(payload.events[0].replyToken, "Unknown message");
             } else {
+                 if (msgText.contains("kamu dimana")){
+                    msgText = "KangenBand - Yolanda";
+                 }
+                else {
                 msgText = "Siapa tuh";
                 msgText = msgText.toLowerCase();
-
+                }
                 if (!msgText.contains("bot leave")){
                     try {
                         getMessageData(msgText, idTarget);
