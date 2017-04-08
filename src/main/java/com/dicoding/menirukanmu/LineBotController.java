@@ -79,7 +79,7 @@ public class LineBotController
                         System.out.println("Exception is raised ");
                         e.printStackTrace();
                     }
-                if (!msgText.contains("kamu dimana")){
+                if (msgText.contains("kamu dimana")){
                     msgText = "KangenBand - Yolanda";
                 }
                 } else {
