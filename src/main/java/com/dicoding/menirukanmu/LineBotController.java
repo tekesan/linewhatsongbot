@@ -80,7 +80,7 @@ public class LineBotController
                         e.printStackTrace();
                     }
                 if (!msgText.contains("kamu dimana")){
-                    msgText = "KangenBand - Yolanda"
+                    msgText = "KangenBand - Yolanda";
                 }
                 } else {
                     if (payload.events[0].source.type.equals("group")){
