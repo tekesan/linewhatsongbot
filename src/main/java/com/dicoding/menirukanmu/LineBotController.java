@@ -69,25 +69,27 @@ public class LineBotController
 
             if (!payload.events[0].message.type.equals("text")){
                 replyToUser(payload.events[0].replyToken, "Unknown message");
-            } 
-            else {
-                if (payload.events[0].message.text.contains("kamu")){
-                    msgText = "Kangen Band - Yolanda";
+            } else {
+                if (payload.events[0].message.text.contains("hi")){
+                    msgText = "dude";
                 }
-                else
-                    msgText = "GAGAL";
-
-                // if (payload.events[0].message.text.contains("meletus balon hijau")){
-                //     msgText = "Unknown - Balonku";
-                // }
                 
-                // else {
-                //     if (payload.events[0].source.type.equals("group")){
-                //         leaveGR(payload.events[0].source.groupId, "group");
-                //     } else if (payload.events[0].source.type.equals("room")){
-                //         leaveGR(payload.events[0].source.roomId, "room");
-                //     }
-                // }
+                if (!msgText.contains("bot leave")){
+                    try {
+                        getMessageData(msgText, idTarget);
+                    } catch (IOException e) {
+                        System.out.println("Exception is raised ");
+                        e.printStackTrace();
+                    }
+                }
+                
+                else {
+                    if (payload.events[0].source.type.equals("group")){
+                        leaveGR(payload.events[0].source.groupId, "group");
+                    } else if (payload.events[0].source.type.equals("room")){
+                        leaveGR(payload.events[0].source.roomId, "room");
+                    }
+                }
 
             }
         }
