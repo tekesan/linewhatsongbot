@@ -69,22 +69,17 @@ public class LineBotController
             if (!payload.events[0].message.type.equals("text")){
                 replyToUser(payload.events[0].replyToken, "Unknown message");
             } else {
-                if (msgText.contains("apadah")){
-                    msgText = "KangenBand - Yolanda";
-                 }
-                else if (msgText.contains("kamu dimana dengan siapa")) {
-                msgText = "Kangen banget?";
-                msgText = msgText.toLowerCase();
+                if (msgText.contains("test")){
+                    msgText = "hmm";
                 }
-                else
-                    msgText = "gagal";
                 if (!msgText.contains("bot leave")){
                     try {
                         getMessageData(msgText, idTarget);
                     } catch (IOException e) {
                         System.out.println("Exception is raised ");
                         e.printStackTrace();
-                    }     
+                    }
+                }
                 } else {
                     if (payload.events[0].source.type.equals("group")){
                         leaveGR(payload.events[0].source.groupId, "group");
