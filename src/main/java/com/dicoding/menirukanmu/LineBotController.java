@@ -70,8 +70,31 @@ public class LineBotController
             if (!payload.events[0].message.type.equals("text")){
                 replyToUser(payload.events[0].replyToken, "Unknown message");
             } else {
-                if (payload.events[0].message.text.contains("hi")){
-                    msgText = "dude";
+                if (payload.events[0].message.text.contains("kamu dimana dengan siapa")){
+                    msgText = "Kangen Band - Yolanda";
+                }
+
+                else if (payload.events[0].message.text.contains("meletus balon hijau")){
+                    msgText = "Lagu Anak Indonesia - Balonku";
+                }
+
+                else if (payload.events[0].message.text.contains("nenek sudah tua giginya tinggal dua")){
+                    msgText = "Lagu Anak Indonesia - Burung Kakaktua";
+                }
+
+                else if (payload.events[0].message.text.contains("diam diam merayap")){
+                    msgText = "Lagu Anak Indonesia - Cicak Cicak Di Dinding";
+                }
+
+                 else if (payload.events[0].message.text.contains("so baby pull me closer")){
+                    msgText = "The Chainsmokers - Closer";
+                }
+
+                 else if (payload.events[0].message.text.contains("untuk apa cinta tanpa pembuktian")){
+                    msgText = "Maudy Ayunda - Untuk Apa";
+
+                else if (payload.events[0].message.text.contains("i gotta put you out of my mind")){
+                    msgText = "Brian Mcknight - One Last Cry";     
                 }
                 
                 if (!msgText.contains("bot leave")){
