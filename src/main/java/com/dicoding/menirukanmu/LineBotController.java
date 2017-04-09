@@ -71,23 +71,23 @@ public class LineBotController
                 replyToUser(payload.events[0].replyToken, "Unknown message");
             } else {
                 if (payload.events[0].message.text.contains("help") || payload.events[0].message.text.contains("Help") || payload.events[0].message.text.contains("HELP")){
-                    msgText = "Aku bisa menebak judul lagu apa yang kamu kirim, dengan cara ketik potongan lirik\n(ex : kamu dimana dengan siapa, so baby pull me closer, nenek sudah tua giginya tinggal dua)\nLet's guess the song together with meh!!";
+                    msgText = "Aku bisa menebak judul lagu apa yang kamu kirim, dengan cara ketik potongan lirik🎵\n\n(ex : kamu dimana dengan siapa, so baby pull me closer, nenek sudah tua giginya tinggal dua)\n\n\nLet's guess the song together with meh!!🎶🎶🎶";
                 }
 
                 if (payload.events[0].message.text.contains("kamu dimana dengan siapa")){
-                    msgText = "Kangen Band - Yolanda";
+                    msgText = "Kangen Band - Yolanda\n\nhttps://www.youtube.com/watch?v=9a1aFrNJ3T8";
                 }
 
                 if (payload.events[0].message.text.contains("so baby pull me closer")){
-                    msgText = "The Chainsmokers - Closer";
+                    msgText = "The Chainsmokers - Closer\n\nhttps://www.youtube.com/watch?v=PT2_F-1esPk";
                 }
                 
                 if (payload.events[0].message.text.contains("nenek sudah tua giginya tinggal dua")){
-                    msgText = "Lagu Anak Indonesia - Burung Kakatua";
+                    msgText = "Lagu Anak Indonesia - Burung Kakatua\n\nhttps://www.youtube.com/watch?v=iAO_wpd2dH4";
                 }
                 
                 if (payload.events[0].message.text.contains("is it just our bodies")){
-                    msgText = "Martin Garrix – Scared To Be Lonely";
+                    msgText = "Martin Garrix – Scared To Be Lonely\n\nhttps://www.youtube.com/watch?v=e2vBLd5Egnk";
                 }
 
                 if (!msgText.contains("bot leave")){
