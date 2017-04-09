@@ -71,8 +71,7 @@ public class LineBotController
                 replyToUser(payload.events[0].replyToken, "Unknown message");
             } else {
                 if (payload.events[0].message.text.contains("help")){
-                    msgText = "Aku bisa menebak judul lagu apa yang kamu kirim, dengan cara ketik potongan lirik (ex : "kamu dimana dengan siapa", "so baby pull me closer", "nenek sudah tua giginya tinggal dua")
-                                Let's guess the song together with meh!!";
+                    msgText = "Aku bisa menebak judul lagu apa yang kamu kirim, dengan cara ketik potongan lirik (ex : kamu dimana dengan siapa, so baby pull me closer, nenek sudah tua giginya tinggal dua) Let's guess the song together with meh!!";
                 }
 
                 if (payload.events[0].message.text.contains("kamu dimana dengan siapa")){
