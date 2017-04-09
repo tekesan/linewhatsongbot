@@ -71,7 +71,7 @@ public class LineBotController
                 replyToUser(payload.events[0].replyToken, "Unknown message");
             } else {
                 if (payload.events[0].message.text.contains("help") || payload.events[0].message.text.contains("Help") || payload.events[0].message.text.contains("HELP")){
-                    msgText = "Aku bisa menebak judul lagu apa yang kamu kirim, dengan cara ketik potongan lirik \n (ex : kamu dimana dengan siapa, so baby pull me closer, nenek sudah tua giginya tinggal dua)\n Let's guess the song together with meh!!";
+                    msgText = "Aku bisa menebak judul lagu apa yang kamu kirim, dengan cara ketik potongan lirik\n(ex : kamu dimana dengan siapa, so baby pull me closer, nenek sudah tua giginya tinggal dua)\nLet's guess the song together with meh!!";
                 }
 
                 if (payload.events[0].message.text.contains("kamu dimana dengan siapa")){
@@ -84,6 +84,10 @@ public class LineBotController
                 
                 if (payload.events[0].message.text.contains("nenek sudah tua giginya tinggal dua")){
                     msgText = "Lagu Anak Indonesia - Burung Kakatua";
+                }
+                
+                if (payload.events[0].message.text.contains("is it just our bodies")){
+                    msgText = "Martin Garrix – Scared To Be Lonely";
                 }
 
                 if (!msgText.contains("bot leave")){
