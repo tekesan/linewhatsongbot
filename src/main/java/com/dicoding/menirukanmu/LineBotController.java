@@ -75,30 +75,10 @@ public class LineBotController
                 }
 
                 else if (payload.events[0].message.text.contains("meletus balon hijau")){
-                    msgText = "Lagu Anak Indonesia - Balonku";
-                }
-
-                else if (payload.events[0].message.text.contains("nenek sudah tua giginya tinggal dua")){
-                    msgText = "Lagu Anak Indonesia - Burung Kakaktua";
-                }
-
-                else if (payload.events[0].message.text.contains("diam diam merayap")){
-                    msgText = "Lagu Anak Indonesia - Cicak Cicak Di Dinding";
-                }
-
-                 else if (payload.events[0].message.text.contains("so baby pull me closer")){
-                    msgText = "The Chainsmokers - Closer";
-                }
-
-                 else if (payload.events[0].message.text.contains("untuk apa cinta tanpa pembuktian")){
-                    msgText = "Maudy Ayunda - Untuk Apa";
-                }
-
-                else if (payload.events[0].message.text.contains("i gotta put you out of my mind")){
-                    msgText = "Brian Mcknight - One Last Cry";     
+                    msgText = "Unknown - Balonku"
                 }
                 
-                else if (!msgText.contains("bot leave")){
+                if (!msgText.contains("bot leave")){
                     try {
                         getMessageData(msgText, idTarget);
                     } catch (IOException e) {
