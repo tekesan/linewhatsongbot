@@ -69,22 +69,14 @@ public class LineBotController
 
             if (!payload.events[0].message.type.equals("text")){
                 replyToUser(payload.events[0].replyToken, "Unknown message");
-            } else {
+            } 
+            else {
                 if (payload.events[0].message.text.contains("kamu dimana dengan siapa")){
                     msgText = "Kangen Band - Yolanda";
                 }
 
                 else if (payload.events[0].message.text.contains("meletus balon hijau")){
                     msgText = "Unknown - Balonku"
-                }
-                
-                else if (!msgText.contains("bot leave")){
-                    try {
-                        getMessageData(msgText, idTarget);
-                    } catch (IOException e) {
-                        System.out.println("Exception is raised ");
-                        e.printStackTrace();
-                    }
                 }
                 
                 else {
