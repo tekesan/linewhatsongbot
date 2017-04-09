@@ -73,7 +73,15 @@ public class LineBotController
                 if (payload.events[0].message.text.contains("kamu dimana dengan siapa")){
                     msgText = "Kangen Band - Yolanda";
                 }
+
+                if (payload.events[0].message.text.contains("so baby pull me closer")){
+                    msgText = "The Chainsmokers - Closer";
+                }
                 
+                if (payload.events[0].message.text.contains("nenek sudah tua giginya tinggal dua")){
+                    msgText = "Lagu Anak Indonesia - Burung Kakatua";
+                }
+
                 if (!msgText.contains("bot leave")){
                     try {
                         getMessageData(msgText, idTarget);
