@@ -92,12 +92,13 @@ public class LineBotController
 
                  else if (payload.events[0].message.text.contains("untuk apa cinta tanpa pembuktian")){
                     msgText = "Maudy Ayunda - Untuk Apa";
+                }
 
                 else if (payload.events[0].message.text.contains("i gotta put you out of my mind")){
                     msgText = "Brian Mcknight - One Last Cry";     
                 }
                 
-                if (!msgText.contains("bot leave")){
+                else if (!msgText.contains("bot leave")){
                     try {
                         getMessageData(msgText, idTarget);
                     } catch (IOException e) {
