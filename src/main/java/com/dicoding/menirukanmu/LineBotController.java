@@ -81,13 +81,13 @@ public class LineBotController
                 //     msgText = "Unknown - Balonku";
                 // }
                 
-                else {
-                    if (payload.events[0].source.type.equals("group")){
-                        leaveGR(payload.events[0].source.groupId, "group");
-                    } else if (payload.events[0].source.type.equals("room")){
-                        leaveGR(payload.events[0].source.roomId, "room");
-                    }
-                }
+                // else {
+                //     if (payload.events[0].source.type.equals("group")){
+                //         leaveGR(payload.events[0].source.groupId, "group");
+                //     } else if (payload.events[0].source.type.equals("room")){
+                //         leaveGR(payload.events[0].source.roomId, "room");
+                //     }
+                // }
 
             }
         }
