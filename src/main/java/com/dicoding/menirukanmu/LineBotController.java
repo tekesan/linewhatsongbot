@@ -70,7 +70,7 @@ public class LineBotController
             if (!payload.events[0].message.type.equals("text")){
                 replyToUser(payload.events[0].replyToken, "Unknown message");
             } else {
-                    msgText = "BERHASIL";
+                    msgText.contains("hi") = "hi juga";
                 
                 if (!msgText.contains("bot leave")){
                     try {
@@ -81,7 +81,7 @@ public class LineBotController
                     }
                 }
                 
-                } else {
+                else {
                     if (payload.events[0].source.type.equals("group")){
                         leaveGR(payload.events[0].source.groupId, "group");
                     } else if (payload.events[0].source.type.equals("room")){
