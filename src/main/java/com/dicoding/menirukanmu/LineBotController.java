@@ -75,9 +75,9 @@ public class LineBotController
                     msgText = "Kangen Band - Yolanda";
                 }
 
-                if (payload.events[0].message.text.contains("meletus balon hijau")){
-                    msgText = "Unknown - Balonku";
-                }
+                // if (payload.events[0].message.text.contains("meletus balon hijau")){
+                //     msgText = "Unknown - Balonku";
+                // }
                 
                 else {
                     if (payload.events[0].source.type.equals("group")){
