@@ -71,7 +71,7 @@ public class LineBotController
                 replyToUser(payload.events[0].replyToken, "Unknown message");
             } else {
                     msgText = "BERHASIL";
-                }
+                
                 if (!msgText.contains("bot leave")){
                     try {
                         getMessageData(msgText, idTarget);
