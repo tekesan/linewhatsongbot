@@ -70,7 +70,9 @@ public class LineBotController
             if (!payload.events[0].message.type.equals("text")){
                 replyToUser(payload.events[0].replyToken, "Unknown message");
             } else {
-                    msgText.contains("hi") = "hi juga";
+                if payload.events[0].message.text = "hi"{
+                    msgText = "dude";
+                }
                 
                 if (!msgText.contains("bot leave")){
                     try {
