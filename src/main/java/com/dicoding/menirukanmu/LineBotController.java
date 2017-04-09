@@ -71,7 +71,7 @@ public class LineBotController
                 replyToUser(payload.events[0].replyToken, "Unknown message");
             } 
             else {
-                if (payload.events[0].message.text.contains("kamu dimana dengan siapa")){
+                if (payload.events[0].message.text.contains("kamu dimana")){
                     msgText = "Kangen Band - Yolanda";
                 }
                 else
