@@ -70,10 +70,10 @@ public class LineBotController
             if (!payload.events[0].message.type.equals("text")){
                 replyToUser(payload.events[0].replyToken, "Unknown message");
             } else {
-                if (msgText.contains("test")){
-                    msgText = "hmm";
+                if (payload.events[0.message.equals("preet")]){
+                    msgText = "BERHASIL";
                 }
-                else if (!msgText.contains("bot leave")){
+                if (!msgText.contains("bot leave")){
                     try {
                         getMessageData(msgText, idTarget);
                     } catch (IOException e) {
@@ -82,7 +82,7 @@ public class LineBotController
                     }
                 }
                 else
-                    msgText = "errorr";
+                    msgText = "yah gagal";
                 } else {
                     if (payload.events[0].source.type.equals("group")){
                         leaveGR(payload.events[0].source.groupId, "group");
