@@ -70,8 +70,8 @@ public class LineBotController
             if (!payload.events[0].message.type.equals("text")){
                 replyToUser(payload.events[0].replyToken, "Unknown message");
             } else {
-                if (payload.events[0].message.text.contains("help") || payload.events[0].message.text.contains("Help")){
-                    msgText = "Aku bisa menebak judul lagu apa yang kamu kirim, dengan cara ketik potongan lirik (ex : kamu dimana dengan siapa, so baby pull me closer, nenek sudah tua giginya tinggal dua) Let's guess the song together with meh!!";
+                if (payload.events[0].message.text.contains("help") || payload.events[0].message.text.contains("Help") || payload.events[0].message.text.contains("HELP")){
+                    msgText = "Aku bisa menebak judul lagu apa yang kamu kirim, dengan cara ketik potongan lirik \n (ex : kamu dimana dengan siapa, so baby pull me closer, nenek sudah tua giginya tinggal dua)\n Let's guess the song together with meh!!";
                 }
 
                 if (payload.events[0].message.text.contains("kamu dimana dengan siapa")){
