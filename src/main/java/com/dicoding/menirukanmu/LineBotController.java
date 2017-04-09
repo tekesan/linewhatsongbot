@@ -78,7 +78,7 @@ public class LineBotController
                     msgText = "Unknown - Balonku"
                 }
                 
-                if (!msgText.contains("bot leave")){
+                else if (!msgText.contains("bot leave")){
                     try {
                         getMessageData(msgText, idTarget);
                     } catch (IOException e) {
