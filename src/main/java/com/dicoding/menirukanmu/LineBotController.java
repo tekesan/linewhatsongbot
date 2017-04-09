@@ -57,7 +57,8 @@ public class LineBotController
             if (payload.events[0].source.type.equals("room")){
                 replyToUser(payload.events[0].replyToken, "Hi Room, this is me whatsongbot! i can guess what song that u text here!");
             }
-        } else if (eventType.equals("message")){
+        }
+         else if (eventType.equals("message")){
             if (payload.events[0].source.type.equals("group")){
                 idTarget = payload.events[0].source.groupId;
             } else if (payload.events[0].source.type.equals("room")){
@@ -72,7 +73,7 @@ public class LineBotController
                 if (msgText.contains("test")){
                     msgText = "hmm";
                 }
-                if (!msgText.contains("bot leave")){
+                if (msgText.contains("bot leave")){
                     try {
                         getMessageData(msgText, idTarget);
                     } catch (IOException e) {
