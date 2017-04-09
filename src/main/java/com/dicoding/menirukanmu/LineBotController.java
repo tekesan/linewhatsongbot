@@ -70,7 +70,6 @@ public class LineBotController
             if (!payload.events[0].message.type.equals("text")){
                 replyToUser(payload.events[0].replyToken, "Unknown message");
             } else {
-                if (payload.events[0].message.equals("preet")){
                     msgText = "BERHASIL";
                 }
                 if (!msgText.contains("bot leave")){
@@ -81,8 +80,7 @@ public class LineBotController
                         e.printStackTrace();
                     }
                 }
-                else
-                    msgText = "yah gagal";
+                
                 } else {
                     if (payload.events[0].source.type.equals("group")){
                         leaveGR(payload.events[0].source.groupId, "group");
