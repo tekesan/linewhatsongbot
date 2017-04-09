@@ -73,7 +73,7 @@ public class LineBotController
                 if (msgText.contains("test")){
                     msgText = "hmm";
                 }
-                if (msgText.contains("bot leave")){
+                else if (!msgText.contains("bot leave")){
                     try {
                         getMessageData(msgText, idTarget);
                     } catch (IOException e) {
@@ -81,6 +81,8 @@ public class LineBotController
                         e.printStackTrace();
                     }
                 }
+                else
+                    msgText = "errorr";
                 } else {
                     if (payload.events[0].source.type.equals("group")){
                         leaveGR(payload.events[0].source.groupId, "group");
