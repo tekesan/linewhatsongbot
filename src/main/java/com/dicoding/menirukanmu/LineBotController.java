@@ -76,7 +76,7 @@ public class LineBotController
                 }
 
                 else if (payload.events[0].message.text.contains("meletus balon hijau")){
-                    msgText = "Unknown - Balonku"
+                    msgText = "Unknown - Balonku";
                 }
                 
                 else {
